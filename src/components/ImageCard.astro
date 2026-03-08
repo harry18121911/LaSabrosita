@@ -1,0 +1,11 @@
+---
+interface Props {
+  imageURL: string;
+}
+const { imageURL = "" } = Astro.props;
+
+---
+
+<div class="mx-8 mb-8">
+  <img class="my-10  mx-auto h-full" src=`/images/${imageURL}`/>
+</div>

@@ -1,0 +1,55 @@
+---
+interface Props {
+  callToAction: string;
+}
+
+const { callToAction } = Astro.props;
+const imageURL = "gym-ropes.jpg";
+const bgStyle = { backgroundImage: `url('/images/${imageURL}')` };
+const content = [
+  {
+    heading: "DIRECCIÓN",
+    info: "BRASIL 45 BARRANQUERAS"
+
+  },
+  {
+    heading: "Horario de atención",
+    info: "19:00 a 00.00 horas",
+  },
+  {
+    heading: "Número de Contacto",
+    info: "+54 9 362 411-5520",
+  },
+];
+---
+
+<footer
+  class=""
+  style={bgStyle}
+>
+  <div class="mx-auto max-w-screen">
+    <h1
+      class="font-extrabold text-5xl text-yellow-600 tracking-wide uppercase justify-self-center italic p-16  max-w-xl"
+    >
+      {callToAction}
+    </h1>
+    <div class="bg-yellow-600 grid grid-cols-1  mx-6">
+      {
+        content.map((item) => (
+          <div class="p-12 justify-items-center">
+            <h1 class="uppercase text-3xl italic">{item.heading}</h1>
+            <p class="text-3xl">{item.info}</p>
+          </div>
+        ))
+      }
+    <div class="p-12 justify-items-center" >
+        <h1 class="uppercase text-3xl italic">ENCONTRANOS EN INSTAGRAM</h1>
+        <h1 class="uppercase text-3xl italic">PULSANDO EL ÍCONO</h1>
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <img src="/images/instagramIcon.png" class="size-32"  />    
+        </a> 
+      </div>
+    </div>
+    
+  </div>
+</footer>

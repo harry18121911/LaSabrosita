@@ -1,0 +1,30 @@
+---
+interface Props {
+  callToAction: string;
+  companyName:string;
+  companyContact: string;
+  //    logoImage:string;
+}
+const { callToAction,  companyName, companyContact } = Astro.props;
+
+const imageURL = "fastFoodHeader.jpg"
+const bgStyle = {
+  backgroundImage: `url('/images/${imageURL}')`,
+};
+---
+
+<header class="overflow-auto bg-cover bg-no-repeat bg-blend-multiply" style={bgStyle}>
+  <nav class="text-yellow-600 uppercase pt-8 p-4 font-bold2">
+    <ul>
+      <li>{companyName}</li>
+      <li>{companyContact}</li>
+    </ul>
+
+  </nav>
+  <div class="px-4 mx-auto max-w-screen-xl text-center py-36 text-yellow-600">
+  
+      <h1 class="font-extrabold text-6xl tracking-wide mb-4 uppercase">{callToAction}</h1>
+
+  </div>
+</header>
+

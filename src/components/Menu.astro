@@ -1,0 +1,163 @@
+---
+const HAMBURGUESAS = [
+    {
+        title: "COMUN",
+        description: "(Medallón de carne, lechuga, tomate, mayonesa)",
+        price: "$4.000",
+    },
+    {
+        title: "ESPECIAL",
+        description: "(Medallón de carne, lechuga, tomate, huevo, jamón, mayonesa)",
+        price: "$5.000",
+    },
+    {
+        title: "CHESSE BURGUER",
+        description: "(Doble carne, doble cheddar)",
+        price: "$6.000",
+    },
+    {
+        title: "SUPER BURGER",
+        description:"(Carne, cheddar, lechuga, tomate, cebolla caramelizada, aderezo)",
+        price: "$7.500",
+    },
+    {
+        title: "LA CASA",
+        description:"(Doble carne, doble cheddar, cebolla caramelizada, aderezo)",
+        price: "$7.000",
+    },
+];
+
+const PIZZAS = [
+    {
+        title: "MUZARELLA",
+        description: "",
+        price: "$8.000",
+    },
+    {
+        title: "ESPECIAL",
+        description: "",
+        price: "$9.300",
+    },
+    {
+        title: "RÚCULA",
+        description: "",
+        price: "$9.500",
+    },
+    {
+        title: "NAPOLITANA",
+        description: "",
+        price: "$9.600",
+    },
+    {
+        title: "FUGAZZETA",
+        description: "",
+        price: "$9.600",
+    },
+];
+
+const PAPASFRITAS = [
+    {
+        title: "CHICA",
+        description: "",
+        price: "$3.500",
+    },
+    {
+        title: "GRANDE PARA COMPARTIR",
+        description: "",
+        price: "$5.000",
+    },
+];
+
+const EMPANADAS = [
+    {
+        title: "CARNE",
+        description: "",
+        price: "$13.000",
+    },
+    {
+        title: "JAMÓN Y QUESO",
+        description: "",
+        price: "$13000",
+    },
+];
+---
+
+<section class="">
+    <h1 class="text-center text-yellow-600/100 text-5xl mb-4 pt-10 italic uppercase">
+        Menu
+    </h1>
+    <div class="flex justify-around">
+        <div class="mx-4">
+            <h1 class="text-yellow-600 text-4xl">HAMBURGUESAS</h1>
+            {
+                HAMBURGUESAS.map((Hamburguesa) => (
+                    <div class="mb-8 flex justify-between">
+                        <div class="flex-1">
+                            <h1 class="text-white ">{Hamburguesa.title}</h1>
+                            <h1 class="text-white">
+                                {Hamburguesa.description}
+                            </h1>
+                        </div>
+                        <div>
+                            <h1 class="text-yellow-600">{Hamburguesa.price}</h1>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+        <div class="mx-4">
+            <div class="mb-16">
+                <h1 class="text-yellow-600 text-4xl">PIZZAS</h1>
+                {
+                    PIZZAS.map((Pizza) => (
+                        <div class="mb-8 flex justify-between">
+                            <div class="">
+                                <h1 class="text-white">{Pizza.title}</h1>
+                                <h1 class="text-white">{Pizza.description}</h1>
+                            </div>
+                            <div>
+                                <h1 class="text-yellow-600">{Pizza.price}</h1>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+            <div class="mb-16">
+                <h1 class="text-yellow-600 text-4xl">PAPAS FRITAS</h1>
+                {
+                    PAPASFRITAS.map((Papas) => (
+                        <div class="mb-8 flex justify-between">
+                            <div>
+                                <h1 class="text-white">{Papas.title}</h1>
+                                <h1 class="text-white">{Papas.description}</h1>
+                            </div>
+                            <div>
+                                <h1 class="text-yellow-600">{Papas.price}</h1>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+            <div class="mb-16">
+                <h1 class="text-yellow-600 text-4xl">EMPANADAS</h1>
+                {
+                    EMPANADAS.map((Empanada) => (
+                        <div class="mb-8 flex justify-between">
+                            <div>
+                                <h1 class="text-white">{Empanada.title}</h1>
+                                <h1 class="text-white">
+                                    {Empanada.description}
+                                </h1>
+                            </div>
+                            <div>
+                                <h1 class="text-yellow-600">
+                                    {Empanada.price}
+                                </h1>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
